@@ -1,0 +1,140 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+    --bg: #0d0d0f;
+    --card: #1a1a1f;
+    --accent: #8b5cf6;
+    --text: #e5e5e5;
+    --muted: #a1a1aa;
+}
+
+/* BODY */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* ABOUT */
+#about {
+    background-color: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+#about p {
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* CARDS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.box {
+    background-color: var(--card);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.box h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.box ul {
+    list-style: none;
+}
+
+.box ul li {
+    margin: 8px 0;
+    color: var(--muted);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* LINKS */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social img {
+    width: 50px;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
