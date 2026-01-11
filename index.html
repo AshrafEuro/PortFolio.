@@ -327,132 +327,21 @@
         }
 
         .skill-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 25px;
             color: var(--text);
             font-weight: 500;
+            transition: all 0.3s ease;
         }
 
-        .skill-bar {
-            height: 10px;
-            background: rgba(139, 92, 246, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #8b5cf6, #ec4899);
-            border-radius: 10px;
-            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
-            box-shadow: 0 0 20px var(--accent-glow);
-        }
-
-        /* Projects */
-        .projects-intro {
-            text-align: center;
-            color: var(--muted);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .project-card {
-            background: var(--card);
-            border-radius: 25px;
-            padding: 2.5rem;
-            border: 1px solid var(--border);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card:hover {
-            transform: translateY(-15px) scale(1.02);
+        .skill-item:hover {
+            background: rgba(139, 92, 246, 0.2);
             border-color: var(--accent);
-            box-shadow: 0 40px 80px var(--accent-glow);
-        }
-
-        .project-card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .project-card h3 {
-            color: var(--accent);
-            margin-bottom: 1.2rem;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-
-        .project-card p {
-            color: var(--muted);
-            margin-bottom: 1.8rem;
-            line-height: 1.7;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .tag {
-            background: rgba(139, 92, 246, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1.2rem;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .tag:hover {
-            background: var(--accent);
-            color: white;
             transform: translateY(-2px);
-        }
-
-        .view-all-projects {
-            text-align: center;
-            margin-top: 3rem;
         }
 
         /* Contact */
@@ -628,10 +517,6 @@
                 width: 100%;
                 text-align: center;
             }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 480px) {
@@ -656,7 +541,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -666,8 +550,7 @@
         <h1>Achraf Dhahri</h1>
         <p class="subtitle">Computer Science Student • Developer • Problem Solver</p>
         <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
-            <a href="cv.pdf" class="btn btn-secondary" target="_blank"><span>CV</span></a>
+            <a href="cv.pdf" class="btn btn-primary" target="_blank"><span>Download CV</span></a>
             <a href="#contact" class="btn btn-secondary"><span>Get in Touch</span></a>
         </div>
     </div>
@@ -714,7 +597,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>C / C++</span>
-                    <span>75%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 75%"></div>
@@ -723,7 +606,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>Python</span>
-                    <span>70%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 70%"></div>
@@ -732,7 +615,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>JavaScript</span>
-                    <span>65%</span>
+                   
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 65%"></div>
@@ -745,7 +628,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>HTML</span>
-                    <span>85%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 85%"></div>
@@ -754,7 +637,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>CSS</span>
-                    <span>80%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 80%"></div>
@@ -763,7 +646,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>Responsive Design</span>
-                    <span>75%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 75%"></div>
@@ -776,7 +659,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>Git</span>
-                    <span>70%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 70%"></div>
@@ -785,7 +668,7 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>VS Code</span>
-                    <span>85%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 85%"></div>
@@ -794,54 +677,13 @@
             <div class="skill-item">
                 <div class="skill-name">
                     <span>Problem Solving</span>
-                    <span>80%</span>
+                    
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 80%"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>My Projects</h2>
-    <p class="projects-intro">
-        Here are some of the projects I've completed. Each one represents a learning journey and practical application of my skills.
-    </p>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A modern, responsive portfolio showcasing my skills and projects with clean design and smooth animations.</p>
-            <div class="project-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>C++ Algorithm Projects</h3>
-            <p>Collection of data structures and algorithms implemented in C++ for learning and practice.</p>
-            <div class="project-tags">
-                <span class="tag">C++</span>
-                <span class="tag">Algorithms</span>
-                <span class="tag">Data Structures</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>Python Automation Tools</h3>
-            <p>Scripts and tools to automate everyday tasks and improve productivity.</p>
-            <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Automation</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="view-all-projects">
-        <a href="projects.html" class="btn btn-primary"><span>View All Projects</span></a>
     </div>
 </section>
 
@@ -891,31 +733,6 @@
                 });
             }
         });
-    });
-
-    // Animate skill bars on scroll
-    const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelectorAll('.skill-progress').forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.skill-category').forEach(category => {
-        observer.observe(category);
     });
 
     // Add subtle parallax effect
